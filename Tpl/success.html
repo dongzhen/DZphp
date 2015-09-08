@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style type='text/css'>
+        div.info{
+            border:solid 2px green;
+            font-size:20px;
+            padding:20px;
+        }
+        </style>
+    </head>
+    <body>
+        <div class='info'>
+            {dz:$message}
+            {dz:if $url}
+                <script>setTimeout(function(){location.href='{dz:$url}'},2000)</script>
+            {dz:else}
+            <script>setTimeout(function(){window.history.go(-1);},2000)</script>
+            {dz:/if}
+        </div>
+    </body>
+</html>
